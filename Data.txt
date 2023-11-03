@@ -1,0 +1,21 @@
+import csv
+
+# Data to write to the CSV file
+data = [
+    ['Name', 'Age', 'City'],
+    ['Alice', 30, 'New York'],
+    ['Bob', 25, 'Los Angeles'],
+    ['Charlie', 35, 'Chicago'],
+]
+
+# Name of the CSV file
+csv_file = 'sample_data.csv'
+
+# Open the file in write mode and create a CSV writer
+with open(csv_file, mode='w', newline='') as file:
+    writer = csv.writer(file)
+
+    # Write the data to the CSV file
+    writer.writerows(data)
+
+print(f'{csv_file} has been created with the data.')
